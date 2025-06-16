@@ -16,7 +16,8 @@ local qot = (queue_on_teleport and queue_on_teleport) or (queueonteleport and qu
 
 qot(([[
     repeat task.wait() until game:IsLoaded()
-
+    print("testttt")
+    
     ozas_hub_settings=%s
     script_key=%s
     script_id=%s
