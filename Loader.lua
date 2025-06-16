@@ -1,5 +1,7 @@
 if not script_key and not script_id and not settings then return game.Players.LocalPlayer:Kick("Failed to load. You might be using an old loader, please get the new one in the #script channel.") end
 
+script_key = getgenv().script_key
+script_id = getgenv().script_id
 ozas_hub_settings = getgenv().ozas_hub_settings
 
 local succ, err = pcall(function()
