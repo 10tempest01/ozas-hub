@@ -13,3 +13,5 @@ end
 local qot = queue_on_teleport and queue_on_teleport or function(...) return (...) end
 
 qot([[loadstring(game:HttpGet("https://raw.githubusercontent.com/10tempest01/ozas-hub/refs/heads/main/Loader.lua"))()]])
+
+-- 341763419876126879146871246789 1249871 247968 
