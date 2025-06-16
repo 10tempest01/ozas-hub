@@ -14,10 +14,10 @@ end
 
 local qot = (queue_on_teleport and queue_on_teleport) or (queueonteleport and queueonteleport) (function(...) return (...) end)
 
-qot(([[
-    repeat task.wait() until game:IsLoaded()
+return qot(([[
     print("testttt")
-    
+    repeat task.wait() until game:IsLoaded()
+
     ozas_hub_settings=%s
     script_key=%s
     script_id=%s
