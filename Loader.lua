@@ -12,7 +12,7 @@ if err then
     warn(("Ozas Hub failed to load.\n Error:%s"):format(tostring(err)))
 end
 
-local qot = (queue_on_teleport and queue_on_teleport) or (queueonteleport and queueonteleport) (function(...) return (...) end)
+local qot = (queue_on_teleport and queue_on_teleport) or (queueonteleport and queueonteleport) or (function(...) return (...) end)
 
 return qot(([[
     print("testttt")
