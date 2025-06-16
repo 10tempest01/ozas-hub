@@ -1,4 +1,4 @@
-if not script_key and not script_id and not settings then return warn("something is missing buddy") end
+if not script_key and not script_id and not settings then return game.Players.LocalPlayer:Kick("Failed to load. You might be using an old loader, please get the new one in the #script channel.") end
 
 print(script_key)
 print(script_id)
