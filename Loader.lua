@@ -14,4 +14,12 @@ end
 
 local qot = (queue_on_teleport and queue_on_teleport) or (queueonteleport and queueonteleport) (function(...) return (...) end)
 
-qot([[loadstring(game:HttpGet("https://raw.githubusercontent.com/10tempest01/ozas-hub/refs/heads/main/Loader.lua"))()]])
+qot(([[
+    repeat task.wait() until game:IsLoaded()
+
+    ozas_hub_settings=%s
+    script_key=%s
+    script_id=%s
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/10tempest01/ozas-hub/refs/heads/main/Loader.lua"))()
+]]):format(ozas_hub_settings, script_key, script_id))
