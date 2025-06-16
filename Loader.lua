@@ -14,7 +14,7 @@ end
 
 local qot = (queue_on_teleport and queue_on_teleport) or (queueonteleport and queueonteleport) or (function(...) return (...) end)
 
-return qot(([[
+qot(([[
     print("testttt")
     repeat task.wait() until game:IsLoaded()
 
