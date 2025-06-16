@@ -1,11 +1,9 @@
 if not script_key and not script_id and not settings then return game.Players.LocalPlayer:Kick("Failed to load. You might be using an old loader, please get the new one in the #script channel.") end
 
-print(script_key)
-print(script_id)
-settings = getgenv().settings
+ozas_hub_settings = getgenv().ozas_hub_settings
 
 local succ, err = pcall(function()
-    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/%s.lua"):format(script_id))()
+    loadstring(game:HttpGet(("https://api.luarmor.net/files/v3/loaders/%s.lua"):format(script_id)))()
 end)
 
 if err then
