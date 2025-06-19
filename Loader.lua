@@ -1,6 +1,6 @@
-if not script_key then
-    return game.Players.LocalPlayer:Kick("Failed to load, script_key not found")
-end
+-- 6/19/2025
+
+if Library then Library:Notify("Script is already running!") return end
 
 local supported = {
     [3808081382] = "adcc551b780178b0b9a84b76f9c0ac72" --> TSB
@@ -25,5 +25,5 @@ end)
 local qot = (queue_on_teleport and queue_on_teleport) or (queueonteleport and queueonteleport) or (function(...) return (...) end)
 
 if execute_on_teleport then
-    queue_on_teleport(([[repeat task.wait() until game:IsLoaded();getgenv().execute_on_teleport=%s;script_key='%s';loadstring(game:HttpGet("https://raw.githubusercontent.com/10tempest01/ozas-hub/refs/heads/main/Loader.lua"))()]]):format((execute_on_teleport and "true") or "false", script_key))
+    queue_on_teleport(([[if Library then return end repeat task.wait() until game:IsLoaded();execute_on_teleport=%s;script_key='%s';loadstring(game:HttpGet("https://raw.githubusercontent.com/10tempest01/ozas-hub/refs/heads/main/Loader.lua"))()]]):format((execute_on_teleport and "true") or "false", script_key))
 end
