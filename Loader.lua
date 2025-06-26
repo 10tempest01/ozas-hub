@@ -25,5 +25,5 @@ end)
 local qot = (queue_on_teleport and queue_on_teleport) or (queueonteleport and queueonteleport) or (function(...) return (...) end)
 
 if execute_on_teleport then
-    queue_on_teleport(([[if Library then return end repeat task.wait() until game:IsLoaded();execute_on_teleport=%s;script_key='%s';loadstring(game:HttpGet("https://raw.githubusercontent.com/10tempest01/ozas-hub/refs/heads/main/Loader.lua"))()]]):format((execute_on_teleport and "true") or "false", script_key))
+    qot(([[if Library then return end repeat task.wait() until game:IsLoaded();execute_on_teleport=%s;script_key='%s';loadstring(game:HttpGet("https://raw.githubusercontent.com/10tempest01/ozas-hub/refs/heads/main/Loader.lua"))()]]):format((execute_on_teleport and "true") or "false", script_key))
 end
